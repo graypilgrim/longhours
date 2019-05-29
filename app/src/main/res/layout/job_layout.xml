@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="20dp">
+
+    <Button
+            android:id="@+id/clock_in_btn"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:text="Clock in"
+            android:textSize="28sp"/>
+
+
+    <TextView
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/clock_in_btn"
+            android:id="@+id/job_started_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:textSize="24sp"
+            android:paddingLeft="5dp"
+            android:text="Started:"/>
+
+    <TextView
+            android:id="@+id/job_started_time_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/job_started_text_view"
+            android:layout_below="@+id/clock_in_btn"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="24sp"/>
+
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Job name"
+            android:layout_below="@id/job_started_text_view"
+            android:inputType="text"
+            android:id="@+id/job_name"/>
+
+    <EditText
+            android:layout_below="@id/job_name"
+            android:hint="Rate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/rate_value"/>
+
+    <TextView
+            android:id="@+id/latitude_label_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rate_value"
+            android:text="Latitude:"
+            android:textSize="20sp"/>
+    <TextView
+            android:id="@+id/latitude_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/rate_value"
+            android:text="0.0"
+            android:textSize="20sp"/>
+
+    <TextView
+            android:id="@+id/longitude_label_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/latitude_label_text_view"
+            android:text="Longitude:"
+
+            android:textSize="20sp"/>
+    <TextView
+            android:id="@+id/longitude_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/latitude_label_text_view"
+            android:text="0.0"
+            android:textSize="20sp"/>
+
+    <Button
+            android:id="@+id/location_btn"
+            android:layout_below="@id/longitude_label_text_view"
+            android:text="Edit location"
+            android:background="@color/colorAccent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <Button
+                android:id="@+id/done_btn"
+                android:text="Done"
+                android:layout_alignParentLeft="true"
+                android:background="@color/colorAccent"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"/>
+
+        <Button
+                android:id="@+id/remove_btn"
+                android:text="Remove"
+                android:layout_alignParentRight="true"
+                android:background="@color/colorAccent"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
